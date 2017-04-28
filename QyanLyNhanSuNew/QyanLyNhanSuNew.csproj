@@ -46,14 +46,71 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Form1.cs">
+    <Compile Include="frmThongTin.cs">
       <SubType>Form</SubType>
     </Compile>
-    <Compile Include="Form1.Designer.cs">
-      <DependentUpon>Form1.cs</DependentUpon>
+    <Compile Include="frmThongTin.Designer.cs">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmHuongDan.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmHuongDan.Designer.cs">
+      <DependentUpon>frmHuongDan.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmSuaXoa.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmSuaXoa.Designer.cs">
+      <DependentUpon>frmSuaXoa.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThem.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThem.Designer.cs">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKeChuyenMon.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeChuyenMon.Designer.cs">
+      <DependentUpon>frmThongKeChuyenMon.cs</DependentUpon>
+    </Compile>
+    <Compile Include="frmThongKeThuNhap.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="frmThongKeThuNhap.Designer.cs">
+      <DependentUpon>frmThongKeThuNhap.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Menu.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Menu.Designer.cs">
+      <DependentUpon>Menu.cs</DependentUpon>
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <EmbeddedResource Include="frmHuongDan.resx">
+      <DependentUpon>frmHuongDan.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmSuaXoa.resx">
+      <DependentUpon>frmSuaXoa.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThem.resx">
+      <DependentUpon>frmThem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeChuyenMon.resx">
+      <DependentUpon>frmThongKeChuyenMon.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongKeThuNhap.resx">
+      <DependentUpon>frmThongKeThuNhap.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="frmThongTin.resx">
+      <DependentUpon>frmThongTin.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Menu.resx">
+      <DependentUpon>Menu.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
