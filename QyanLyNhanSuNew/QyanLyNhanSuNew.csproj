@@ -90,6 +90,11 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="QuanLyNhanSuDataSet1.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="frmHuongDan.resx">
       <DependentUpon>frmHuongDan.cs</DependentUpon>
     </EmbeddedResource>
@@ -129,6 +134,17 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
+    <None Include="QuanLyNhanSuDataSet1.xsc">
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </None>
+    <None Include="QuanLyNhanSuDataSet1.xsd">
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>QuanLyNhanSuDataSet1.Designer.cs</LastGenOutput>
+      <SubType>Designer</SubType>
+    </None>
+    <None Include="QuanLyNhanSuDataSet1.xss">
+      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
+    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
