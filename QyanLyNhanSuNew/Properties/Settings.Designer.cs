@@ -26,8 +26,8 @@ namespace QyanLyNhanSuNew.Properties {
         [global::System.Configuration.ApplicationScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
         [global::System.Configuration.SpecialSettingAttribute(global::System.Configuration.SpecialSetting.ConnectionString)]
-        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=EDWARD\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=Tr" +
-            "ue")]
+        [global::System.Configuration.DefaultSettingValueAttribute("Data Source=(local)\\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Securit" +
+            "y=True")]
         public string QuanLyNhanSuConnectionString {
             get {
                 return ((string)(this["QuanLyNhanSuConnectionString"]));
