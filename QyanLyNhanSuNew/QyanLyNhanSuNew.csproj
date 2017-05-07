@@ -52,12 +52,6 @@
     <Compile Include="frmThongTin.Designer.cs">
       <DependentUpon>frmThongTin.cs</DependentUpon>
     </Compile>
-    <Compile Include="frmHuongDan.cs">
-      <SubType>Form</SubType>
-    </Compile>
-    <Compile Include="frmHuongDan.Designer.cs">
-      <DependentUpon>frmHuongDan.cs</DependentUpon>
-    </Compile>
     <Compile Include="frmSuaXoa.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -95,9 +89,6 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
     </Compile>
-    <EmbeddedResource Include="frmHuongDan.resx">
-      <DependentUpon>frmHuongDan.cs</DependentUpon>
-    </EmbeddedResource>
     <EmbeddedResource Include="frmSuaXoa.resx">
       <DependentUpon>frmSuaXoa.cs</DependentUpon>
     </EmbeddedResource>
@@ -134,17 +125,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyNhanSuDataSet1.xsc">
-      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyNhanSuDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyNhanSuDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyNhanSuDataSet1.xss">
-      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
