@@ -48,7 +48,7 @@ namespace QyanLyNhanSuNew
 
         private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, System.IO.Path.Combine(Application.StartupPath, "huongdan.htm"));
+            Help.ShowHelp(this, System.IO.Path.Combine("E:\\github\\QuanLyNhanSuNew\\huongdan.htm"));
         }
 
         private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
@@ -60,5 +60,6 @@ namespace QyanLyNhanSuNew
         {
             frmtkcm.ShowDialog();
         }
+
     }
 }
