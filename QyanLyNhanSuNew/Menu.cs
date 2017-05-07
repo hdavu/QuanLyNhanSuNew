@@ -16,6 +16,7 @@ namespace QyanLyNhanSuNew
 
 
 
+        frmHuongDan frmhuongdan = new frmHuongDan();
         frmSuaXoa frmsuaxoa = new frmSuaXoa();
         frmThem frmthem = new frmThem();
         frmThongKeChuyenMon frmtkcm = new frmThongKeChuyenMon();
@@ -48,7 +49,7 @@ namespace QyanLyNhanSuNew
 
         private void hướngDẫnToolStripMenuItem_Click(object sender, EventArgs e)
         {
-            Help.ShowHelp(this, System.IO.Path.Combine(Application.StartupPath, "huongdan.htm"));
+            frmhuongdan.ShowDialog();
         }
 
         private void thôngTinToolStripMenuItem_Click(object sender, EventArgs e)
