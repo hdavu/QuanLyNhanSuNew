@@ -150,14 +150,14 @@
             // hướngDẫnToolStripMenuItem
             // 
             this.hướngDẫnToolStripMenuItem.Name = "hướngDẫnToolStripMenuItem";
-            this.hướngDẫnToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.hướngDẫnToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.hướngDẫnToolStripMenuItem.Text = "Hướng dẫn";
             this.hướngDẫnToolStripMenuItem.Click += new System.EventHandler(this.hướngDẫnToolStripMenuItem_Click);
             // 
             // thôngTinToolStripMenuItem
             // 
             this.thôngTinToolStripMenuItem.Name = "thôngTinToolStripMenuItem";
-            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(134, 22);
+            this.thôngTinToolStripMenuItem.Size = new System.Drawing.Size(152, 22);
             this.thôngTinToolStripMenuItem.Text = "Thông tin";
             this.thôngTinToolStripMenuItem.Click += new System.EventHandler(this.thôngTinToolStripMenuItem_Click);
             // 
