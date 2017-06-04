@@ -33,6 +33,7 @@ namespace QyanLyNhanSuNew
 
         private void thêmToolStripMenuItem_Click(object sender, EventArgs e)
         {
+           
             frmthem.ShowDialog();
         }
 
@@ -62,60 +63,21 @@ namespace QyanLyNhanSuNew
         {
             frmtkcm.ShowDialog();
         }
-
-
-
-
-
-
-
-
-
-
         /////////////
 
         SqlConnection con = new SqlConnection(@"Data Source=(local)\SQLEXPRESS;Initial Catalog=QuanLyNhanSu;Integrated Security=True");
-        DataSet ds = new DataSet();
-
-
-
-
-        public void KetNoiCSDL()
-        {
-
-            string sql = " SELECT nv.ma, nv.ten, nv.ngaysinh, nv.quequan, nv.tongiao,nv.diachi, (CASE nv.gioitinh WHEN 'true' THEN N'Nam' WHEN 'false' THEN N'Nữ' END) as gioitinh , phongban.ten , trinhdo.tentrinhdo, chuyenmon.tenchuyenmon, chucvu.ten , nv.anh"
-                           + " FROM nhanvien nv"
-                           + " INNER JOIN phongban  ON nv.phongbanma = phongban.ma"
-                           + " INNER JOIN trinhdo   ON nv.trinhdoma = trinhdo.ma"
-                           + " INNER JOIN chuyenmon ON nv.chuyenmonma = chuyenmon.ma"
-                           + " INNER JOIN  chucvu   ON nv.chucvuma = chucvu.ma";
-
-
-
-            con.Open();
-            {
-                SqlCommand com = new SqlCommand(sql, con);
-                com.CommandType = CommandType.Text;
-                SqlDataAdapter da = new SqlDataAdapter(com);
-                da.Fill(ds);
-            }
-            con.Close();
-
-            danh_sachdataGridView1.DataSource = ds.Tables[0].DefaultView;
-            danh_sachdataGridView1.Columns["ten1"].HeaderText = "Phòng ban";
-            danh_sachdataGridView1.Columns["tentrinhdo"].HeaderText = "Trình độ";
-            danh_sachdataGridView1.Columns["tenchuyenmon"].HeaderText = "Chuyên môn";
-            danh_sachdataGridView1.Columns["ten2"].HeaderText = "Chức vụ";
-            danh_sachdataGridView1.Columns["anh"].Visible = false;
-            danh_sachdataGridView1.Columns["ma"].Visible = false;
-
-        }
-
-           
-
 
         private void LoadData() //hien hti du lieu len cac o textbox
         {
+
+
+
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT nv.ma, nv.ten, nv.ngaysinh, nv.quequan, nv.tongiao,nv.diachi, (CASE nv.gioitinh WHEN 'true' THEN N'Nam' WHEN 'false' THEN N'Nữ' END) as gioitinh , phongban.ten , trinhdo.tentrinhdo, chuyenmon.tenchuyenmon, chucvu.ten , nv.anh FROM nhanvien nv INNER JOIN phongban  ON nv.phongbanma = phongban.ma INNER JOIN trinhdo   ON nv.trinhdoma = trinhdo.ma INNER JOIN chuyenmon ON nv.chuyenmonma = chuyenmon.ma INNER JOIN  chucvu   ON nv.chucvuma = chucvu.ma WHERE nv.ten LIKE N'%" + txtTimKiem.Text + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+
+
+            danh_sachdataGridView1.DataSource = dt;
 
             //xoa trang cac o textbox
             txtHoTen.DataBindings.Clear();
@@ -164,7 +126,7 @@ namespace QyanLyNhanSuNew
         private void Menu_Load_1(object sender, EventArgs e)
         {
 
-            KetNoiCSDL();
+            
             LoadData();
         }
 
@@ -251,6 +213,11 @@ namespace QyanLyNhanSuNew
 
             }
 
+        }
+
+        private void button2_Click(object sender, EventArgs e)
+        {
+            LoadData();
         }
     }
 }
