@@ -63,6 +63,12 @@ namespace QyanLyNhanSuNew
             if (MessageBox.Show("Bạn muốn sửa thông tin?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
 
+
+               
+
+              
+
+
                 Connection.con.Open();
                 string sua = string.Format("update nhanvien set anh = @img, ten=N'{0}',dantoc=N'{1}', gioitinh=N'{2}' ,tongiao=N'{3}',quequan=N'{4}',ngaysinh=N'{5}',diachi=N'{6}',chuyenmonma=(select ma from chuyenmon where chuyenmon.tenchuyenmon=N'{7}'),phongbanma=(select ma from phongban where phongban.ten=N'{8}'),chucvuma=(select ma from chucvu where chucvu.ten=N'{9}'),trinhdoma=(select ma from trinhdo where trinhdo.tentrinhdo=N'{10}') where ma={11}", txtHoten.Text, txtDantoc.Text, cboGioitinh.ValueMember, cboTongiao.Text, txtQuequan.Text, dtpNgaysinh.Value.ToString("MM-dd-yyyy"), txtDiachi.Text, cboChuyenmon.Text, cboPhongban.Text, cboChucvu.Text, cboTrinhdo.Text, txtMa.Text);
                 SqlCommand cmd = new SqlCommand(sua, Connection.con);
@@ -92,33 +98,24 @@ namespace QyanLyNhanSuNew
 
         private void dgvDanhsach_CellClick(object sender, DataGridViewCellEventArgs e)
         {
-            try
-            {
-                txtHoten.Text = dgvDanhsach.CurrentRow.Cells[2].Value.ToString();
-                cboGioitinh.Text = dgvDanhsach.CurrentRow.Cells[3].Value.ToString();
-                dtpNgaysinh.Text = dgvDanhsach.CurrentRow.Cells[6].Value.ToString();
-                txtDantoc.Text = dgvDanhsach.CurrentRow.Cells[4].Value.ToString();
-                txtDiachi.Text = dgvDanhsach.CurrentRow.Cells[8].Value.ToString();
-                txtQuequan.Text = dgvDanhsach.CurrentRow.Cells[7].Value.ToString();
-                cboChucvu.Text = dgvDanhsach.CurrentRow.Cells[11].Value.ToString();
-                cboChuyenmon.Text = dgvDanhsach.CurrentRow.Cells[9].Value.ToString();
-                cboPhongban.Text = dgvDanhsach.CurrentRow.Cells[10].Value.ToString();
-                cboTrinhdo.Text = dgvDanhsach.CurrentRow.Cells[12].Value.ToString();
-                cboTongiao.Text = dgvDanhsach.CurrentRow.Cells[5].Value.ToString();
-                txtMa.Text = dgvDanhsach.CurrentRow.Cells[0].Value.ToString();
+            txtHoten.Text = dgvDanhsach.CurrentRow.Cells[2].Value.ToString();
+            cboGioitinh.Text = dgvDanhsach.CurrentRow.Cells[3].Value.ToString();
+            dtpNgaysinh.Text = dgvDanhsach.CurrentRow.Cells[6].Value.ToString();
+            txtDantoc.Text = dgvDanhsach.CurrentRow.Cells[4].Value.ToString();
+            txtDiachi.Text = dgvDanhsach.CurrentRow.Cells[8].Value.ToString();
+            txtQuequan.Text = dgvDanhsach.CurrentRow.Cells[7].Value.ToString();
+            cboChucvu.Text = dgvDanhsach.CurrentRow.Cells[11].Value.ToString();
+            cboChuyenmon.Text = dgvDanhsach.CurrentRow.Cells[9].Value.ToString();
+            cboPhongban.Text = dgvDanhsach.CurrentRow.Cells[10].Value.ToString();
+            cboTrinhdo.Text = dgvDanhsach.CurrentRow.Cells[12].Value.ToString();
+            cboTongiao.Text = dgvDanhsach.CurrentRow.Cells[5].Value.ToString();
+            txtMa.Text = dgvDanhsach.CurrentRow.Cells[0].Value.ToString();
+            img = (byte[])dgvDanhsach.CurrentRow.Cells[1].Value;
 
-                img = (byte[])dgvDanhsach.CurrentRow.Cells[1].Value;
-
-                //------------------------//
-                pbAnh.DataBindings.Clear();
-                if (dgvDanhsach.CurrentRow.Cells[1] != null)
-                    pbAnh.DataBindings.Add(new Binding("Image", dgvDanhsach.DataSource, "anh", true));
-            }
-            catch
-            {
-                MessageBox.Show("Khong co nhan vien nay");
-            }
-
+            //------------------------//
+            pbAnh.DataBindings.Clear();
+            if (dgvDanhsach.CurrentRow.Cells[1] != null)
+                pbAnh.DataBindings.Add(new Binding("Image", dgvDanhsach.DataSource, "anh", true));
         }
 
         private void btnThoat_Click(object sender, EventArgs e)
