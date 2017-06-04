@@ -116,7 +116,7 @@ namespace QyanLyNhanSuNew
             }
             catch
             {
-                //MessageBox.Show("Khong co nhan vien nay");
+                MessageBox.Show("Khong co nhan vien nay");
             }
 
         }

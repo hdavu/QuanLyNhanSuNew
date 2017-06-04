@@ -14,10 +14,6 @@ namespace QyanLyNhanSuNew
 {
     public partial class frmThem : Form
     {
-
-
-        Menu frmMenu = new Menu();
-
         public frmThem()
         {
             InitializeComponent();
@@ -71,10 +67,8 @@ namespace QyanLyNhanSuNew
                     {
                         cmd.ExecuteNonQuery();
                         MessageBox.Show("Thêm thành công");
-                        
                         Connection.con.Close();
-                        frmMenu.ShowDialog();
-                       
+
                     }
                     catch (Exception ex)
                     {
@@ -88,9 +82,7 @@ namespace QyanLyNhanSuNew
 
         private void btnThoat_Click(object sender, EventArgs e)
         {
-            frmMenu.ShowDialog();
-            
-            
+            this.Close();
         }
 
         private void btnChonAnh_Click(object sender, EventArgs e)

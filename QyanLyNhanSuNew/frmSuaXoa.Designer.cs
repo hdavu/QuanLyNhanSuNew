@@ -528,7 +528,7 @@
             this.Name = "frmSuaXoa";
             this.Text = "Sua Xoa";
             this.Load += new System.EventHandler(this.frmSuaXoa_Load);
-           // this.groupBox1.ResumeLayout(false);
+            this.groupBox1.ResumeLayout(false);
             this.grpAnh.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnh)).EndInit();
             this.grpThongtin.ResumeLayout(false);
@@ -541,7 +541,7 @@
             ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSetBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.chuyenmonBindingSource)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.trinhdoBindingSource)).EndInit();
-           // this.ResumeLayout(false);
+            this.ResumeLayout(false);
 
         }
 
