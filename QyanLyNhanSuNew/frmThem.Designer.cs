@@ -48,30 +48,30 @@
             this.label1 = new System.Windows.Forms.Label();
             this.dtpNgaysinh = new System.Windows.Forms.DateTimePicker();
             this.cboTrinhdo = new System.Windows.Forms.ComboBox();
+            this.trinhdoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.quanLyNhanSuDataSet = new QyanLyNhanSuNew.QuanLyNhanSuDataSet();
             this.cboTongiao = new System.Windows.Forms.ComboBox();
             this.cboChuyenmon = new System.Windows.Forms.ComboBox();
+            this.chuyenmonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboChucvu = new System.Windows.Forms.ComboBox();
+            this.chucvuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboPhongban = new System.Windows.Forms.ComboBox();
+            this.phongbanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.cboGioitinh = new System.Windows.Forms.ComboBox();
             this.txtHoten = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.pbAnh = new System.Windows.Forms.PictureBox();
-            this.quanLyNhanSuDataSet = new QyanLyNhanSuNew.QuanLyNhanSuDataSet();
-            this.phongbanBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.phongbanTableAdapter = new QyanLyNhanSuNew.QuanLyNhanSuDataSetTableAdapters.phongbanTableAdapter();
-            this.chucvuBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chucvuTableAdapter = new QyanLyNhanSuNew.QuanLyNhanSuDataSetTableAdapters.chucvuTableAdapter();
-            this.chuyenmonBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.chuyenmonTableAdapter = new QyanLyNhanSuNew.QuanLyNhanSuDataSetTableAdapters.chuyenmonTableAdapter();
-            this.trinhdoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.trinhdoTableAdapter = new QyanLyNhanSuNew.QuanLyNhanSuDataSetTableAdapters.trinhdoTableAdapter();
+            ((System.ComponentModel.ISupportInitialize)(this.trinhdoBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chuyenmonBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucvuBindingSource)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongbanBindingSource)).BeginInit();
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.pbAnh)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phongbanBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chucvuBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chuyenmonBindingSource)).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trinhdoBindingSource)).BeginInit();
             this.SuspendLayout();
             // 
             // btnChonAnh
@@ -229,7 +229,7 @@
             this.dtpNgaysinh.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
             this.dtpNgaysinh.Location = new System.Drawing.Point(327, 154);
             this.dtpNgaysinh.Name = "dtpNgaysinh";
-            this.dtpNgaysinh.Size = new System.Drawing.Size(100, 20);
+            this.dtpNgaysinh.Size = new System.Drawing.Size(152, 20);
             this.dtpNgaysinh.TabIndex = 21;
             // 
             // cboTrinhdo
@@ -242,6 +242,16 @@
             this.cboTrinhdo.Size = new System.Drawing.Size(170, 21);
             this.cboTrinhdo.TabIndex = 20;
             this.cboTrinhdo.ValueMember = "ma";
+            // 
+            // trinhdoBindingSource
+            // 
+            this.trinhdoBindingSource.DataMember = "trinhdo";
+            this.trinhdoBindingSource.DataSource = this.quanLyNhanSuDataSet;
+            // 
+            // quanLyNhanSuDataSet
+            // 
+            this.quanLyNhanSuDataSet.DataSetName = "QuanLyNhanSuDataSet";
+            this.quanLyNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
             // 
             // cboTongiao
             // 
@@ -270,6 +280,11 @@
             this.cboChuyenmon.TabIndex = 18;
             this.cboChuyenmon.ValueMember = "ma";
             // 
+            // chuyenmonBindingSource
+            // 
+            this.chuyenmonBindingSource.DataMember = "chuyenmon";
+            this.chuyenmonBindingSource.DataSource = this.quanLyNhanSuDataSet;
+            // 
             // cboChucvu
             // 
             this.cboChucvu.DataSource = this.chucvuBindingSource;
@@ -281,6 +296,11 @@
             this.cboChucvu.TabIndex = 17;
             this.cboChucvu.ValueMember = "ma";
             // 
+            // chucvuBindingSource
+            // 
+            this.chucvuBindingSource.DataMember = "chucvu";
+            this.chucvuBindingSource.DataSource = this.quanLyNhanSuDataSet;
+            // 
             // cboPhongban
             // 
             this.cboPhongban.DataSource = this.phongbanBindingSource;
@@ -291,6 +311,11 @@
             this.cboPhongban.Size = new System.Drawing.Size(170, 21);
             this.cboPhongban.TabIndex = 16;
             this.cboPhongban.ValueMember = "ma";
+            // 
+            // phongbanBindingSource
+            // 
+            this.phongbanBindingSource.DataMember = "phongban";
+            this.phongbanBindingSource.DataSource = this.quanLyNhanSuDataSet;
             // 
             // cboGioitinh
             // 
@@ -329,42 +354,17 @@
             this.pbAnh.TabIndex = 0;
             this.pbAnh.TabStop = false;
             // 
-            // quanLyNhanSuDataSet
-            // 
-            this.quanLyNhanSuDataSet.DataSetName = "QuanLyNhanSuDataSet";
-            this.quanLyNhanSuDataSet.SchemaSerializationMode = System.Data.SchemaSerializationMode.IncludeSchema;
-            // 
-            // phongbanBindingSource
-            // 
-            this.phongbanBindingSource.DataMember = "phongban";
-            this.phongbanBindingSource.DataSource = this.quanLyNhanSuDataSet;
-            // 
             // phongbanTableAdapter
             // 
             this.phongbanTableAdapter.ClearBeforeFill = true;
-            // 
-            // chucvuBindingSource
-            // 
-            this.chucvuBindingSource.DataMember = "chucvu";
-            this.chucvuBindingSource.DataSource = this.quanLyNhanSuDataSet;
             // 
             // chucvuTableAdapter
             // 
             this.chucvuTableAdapter.ClearBeforeFill = true;
             // 
-            // chuyenmonBindingSource
-            // 
-            this.chuyenmonBindingSource.DataMember = "chuyenmon";
-            this.chuyenmonBindingSource.DataSource = this.quanLyNhanSuDataSet;
-            // 
             // chuyenmonTableAdapter
             // 
             this.chuyenmonTableAdapter.ClearBeforeFill = true;
-            // 
-            // trinhdoBindingSource
-            // 
-            this.trinhdoBindingSource.DataMember = "trinhdo";
-            this.trinhdoBindingSource.DataSource = this.quanLyNhanSuDataSet;
             // 
             // trinhdoTableAdapter
             // 
@@ -405,13 +405,13 @@
             this.Name = "frmThem";
             this.Text = "Them";
             this.Load += new System.EventHandler(this.frmThem_Load);
+            ((System.ComponentModel.ISupportInitialize)(this.trinhdoBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chuyenmonBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.chucvuBindingSource)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.phongbanBindingSource)).EndInit();
             this.groupBox1.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.pbAnh)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.quanLyNhanSuDataSet)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.phongbanBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chucvuBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.chuyenmonBindingSource)).EndInit();
-            ((System.ComponentModel.ISupportInitialize)(this.trinhdoBindingSource)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
