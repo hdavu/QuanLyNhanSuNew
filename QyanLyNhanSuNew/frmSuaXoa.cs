@@ -19,7 +19,6 @@ namespace QyanLyNhanSuNew
         {
             InitializeComponent();
         }
-        byte[] img = null;
 
         private void LoadDL()
         {
@@ -64,9 +63,11 @@ namespace QyanLyNhanSuNew
             {
 
 
-               
+                byte[] img = null;
 
-              
+                FileStream fst = new FileStream(imageLocate, FileMode.Open, FileAccess.Read);
+                BinaryReader br = new BinaryReader(fst);
+                img = br.ReadBytes((int)fst.Length);
 
 
                 Connection.con.Open();
@@ -110,7 +111,7 @@ namespace QyanLyNhanSuNew
             cboTrinhdo.Text = dgvDanhsach.CurrentRow.Cells[12].Value.ToString();
             cboTongiao.Text = dgvDanhsach.CurrentRow.Cells[5].Value.ToString();
             txtMa.Text = dgvDanhsach.CurrentRow.Cells[0].Value.ToString();
-            img = (byte[])dgvDanhsach.CurrentRow.Cells[1].Value;
+
 
             //------------------------//
             pbAnh.DataBindings.Clear();
@@ -145,10 +146,6 @@ namespace QyanLyNhanSuNew
                 imageLocate = opd.FileName.ToString();
                 pbAnh.ImageLocation = imageLocate;
             }
-
-            FileStream fst = new FileStream(imageLocate, FileMode.Open, FileAccess.Read);
-            BinaryReader br = new BinaryReader(fst);
-            img = br.ReadBytes((int)fst.Length);
         }
 
         private void btnXoa_Click(object sender, EventArgs e)
