@@ -125,17 +125,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="QuanLyNhanSuDataSet1.xsc">
-      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
-    </None>
-    <None Include="QuanLyNhanSuDataSet1.xsd">
-      <Generator>MSDataSetGenerator</Generator>
-      <LastGenOutput>QuanLyNhanSuDataSet1.Designer.cs</LastGenOutput>
-      <SubType>Designer</SubType>
-    </None>
-    <None Include="QuanLyNhanSuDataSet1.xss">
-      <DependentUpon>QuanLyNhanSuDataSet1.xsd</DependentUpon>
-    </None>
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
