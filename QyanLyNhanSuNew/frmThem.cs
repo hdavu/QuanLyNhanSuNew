@@ -35,7 +35,7 @@ namespace QyanLyNhanSuNew
 
         private void btnXacnhan_Click(object sender, EventArgs e)
         {
-            if (txtHoten.TextLength > 0 && txtDantoc.TextLength > 0 && txtDiachi.TextLength > 0 && txtQuequan.TextLength > 0 && cboChucvu.Text.Length > 0 && cboChuyenmon.Text.Length > 0 && cboGioitinh.Text.Length > 0 && cboPhongban.Text.Length > 0 && cboTongiao.Text.Length > 0 && cboTrinhdo.Text.Length > 0)
+            if (txtHoten.TextLength > 0 && txtDantoc.TextLength > 0 && txtDiachi.TextLength > 0 && txtQuequan.TextLength > 0 && cboChucvu.Text.Length > 0 && cboChuyenmon.Text.Length > 0 && cboGioitinh.Text.Length > 0 && cboPhongban.Text.Length > 0 && cboTongiao.Text.Length > 0 && cboTrinhdo.Text.Length > 0 && imageLocate.Length >0)
             {
                 if ((MessageBox.Show("Bạn muốn thêm nhân viên này?", "Thông báo", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes))
                 {
