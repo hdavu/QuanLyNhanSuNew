@@ -73,6 +73,10 @@
             this.tongiao = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.diachi = new System.Windows.Forms.DataGridViewTextBoxColumn();
             this.gioitinh = new System.Windows.Forms.DataGridViewTextBoxColumn();
+<<<<<<< HEAD
+=======
+            this.button1 = new System.Windows.Forms.Button();
+>>>>>>> refs/remotes/origin/hiep
             this.menuStrip1.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox2.SuspendLayout();
@@ -163,6 +167,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.button1);
             this.groupBox1.Controls.Add(this.mtxtNgaySinh);
             this.groupBox1.Controls.Add(this.txtTimKiem);
             this.groupBox1.Controls.Add(this.label11);
@@ -487,6 +492,19 @@
             this.gioitinh.Name = "gioitinh";
             this.gioitinh.ReadOnly = true;
             // 
+<<<<<<< HEAD
+=======
+            // button1
+            // 
+            this.button1.Location = new System.Drawing.Point(757, 286);
+            this.button1.Name = "button1";
+            this.button1.Size = new System.Drawing.Size(75, 23);
+            this.button1.TabIndex = 25;
+            this.button1.Text = "button1";
+            this.button1.UseVisualStyleBackColor = true;
+            this.button1.Click += new System.EventHandler(this.button1_Click);
+            // 
+>>>>>>> refs/remotes/origin/hiep
             // Menu
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -559,6 +577,7 @@
         private System.Windows.Forms.DataGridViewTextBoxColumn gioitinh;
         private System.Windows.Forms.PictureBox pbAnh;
         private System.Windows.Forms.MaskedTextBox mtxtNgaySinh;
+        private System.Windows.Forms.Button button1;
     }
 }
 
