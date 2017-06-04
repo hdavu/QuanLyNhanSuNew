@@ -252,5 +252,14 @@ namespace QyanLyNhanSuNew
             }
 
         }
+
+        private void button1_Click(object sender, EventArgs e)
+        {
+            SqlDataAdapter sda = new SqlDataAdapter("SELECT nv.ma, nv.ten, nv.ngaysinh, nv.quequan, nv.tongiao,nv.diachi, (CASE nv.gioitinh WHEN 'true' THEN N'Nam' WHEN 'false' THEN N'Nữ' END) as gioitinh , phongban.ten , trinhdo.tentrinhdo, chuyenmon.tenchuyenmon, chucvu.ten , nv.anh FROM nhanvien nv INNER JOIN phongban  ON nv.phongbanma = phongban.ma INNER JOIN trinhdo   ON nv.trinhdoma = trinhdo.ma INNER JOIN chuyenmon ON nv.chuyenmonma = chuyenmon.ma INNER JOIN  chucvu   ON nv.chucvuma = chucvu.ma WHERE chucvu.ten LIKE N'%" + txtTimKiem.Text + "%'", con);
+            DataTable dt = new DataTable();
+            sda.Fill(dt);
+            danh_sachdataGridView1.DataSource = dt;
+            LoadData();
+        }
     }
 }
