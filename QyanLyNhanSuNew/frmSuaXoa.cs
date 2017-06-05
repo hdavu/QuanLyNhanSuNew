@@ -156,7 +156,7 @@ namespace QyanLyNhanSuNew
             if (MessageBox.Show("Bạn muốn xóa thông tin?", "Xác nhận", MessageBoxButtons.YesNo, MessageBoxIcon.Question) == DialogResult.Yes)
             {
                 Connection.con.Open();
-                string sua = string.Format("delete from nhanvien where ma={0}", txtMa.Text);
+                string sua = string.Format("delete from nhanvien where ma='{0}'", txtMa.Text);
                 SqlCommand cmd = new SqlCommand(sua, Connection.con);
                 cmd.CommandType = CommandType.Text;
                 try
